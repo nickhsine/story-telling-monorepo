@@ -151,7 +151,7 @@ const webpackConfig = {
   plugins: [
     new webpack.EnvironmentPlugin({
       NODE_ENV: process.env.NODE_ENV,
-      RESOURCES_HOSTED_AT: 'gcs',
+      RESOURCES_HOSTED_AT: resourcesHostedAt || 'gcs',
     }),
     new WebpackManifestPlugin({
       useEntryKeys: true,

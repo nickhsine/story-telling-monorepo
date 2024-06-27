@@ -55,7 +55,7 @@ export default {
     }),
     new webpack.EnvironmentPlugin({
       NODE_ENV: process.env.NODE_ENV,
-      RESOURCES_HOSTED_AT: 'localhost',
+      RESOURCES_HOSTED_AT: process.env.RESOURCES_HOSTED_AT || 'localhost',
     }),
   ],
   devtool: 'eval-source-map',
